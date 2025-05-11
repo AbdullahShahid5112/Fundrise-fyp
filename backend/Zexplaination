@@ -1,0 +1,25 @@
+1==>npm init is used to create a package.json file, which initializes a new Node.js project.
+
+2==>npm i express mongoose dotenv jsonwebtoken bcryptjs cookie-parser cloudinary socket.io 
+
+3==>  npm i nodemon
+
+
+4==> entery point is index.js 
+
+5==> connect mongodb online
+
+6==> import it to index.js
+
+
+7==>protectRoute is for cofirm that user is login or not
+ 
+
+
+FOR MESSAGE WE WILL CREATE ITS SCHEME(db table) in MODELS folder
+use in index.js
+created message.route.js 
+
+
+another package
+8==> npm i cors

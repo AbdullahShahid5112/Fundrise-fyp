@@ -1,0 +1,42 @@
+// packages 
+// 1=====>npm i react-router-dom
+// 2=====>react-hot-toast 
+// 3=====>npm install -D tailwindcss@3 postcss autoprefixer
+// npx tailwindcss init -p
+
+
+
+// //writing this in  tailwind.config.js from 3 comments to until 3 comments
+// // //import { defineConfig } from 'vite'
+// // //import react from '@vitejs/plugin-react'
+
+// // // https://vite.dev/config/
+// // export default defineConfig({
+// // // plugins: [react()],
+// // // })
+//write this in css
+// // @tailwind base;
+// //@tailwind components;
+// //@tailwind utilities;
+
+
+//package
+// 4=====>npm i -D daisyui@latest
+//5======>npm i -D daisyui@latest
+
+
+
+//importing ReactRouter to use react component 
+
+
+//package
+// 6=====>npm i axios zustand use to manage api
+// axios for api 
+// zustand os use for global state management so that we write it one and use anywhere
+//instad of writing everywhere
+
+
+//7======>npm i lucide-react
+
+
+// another package  npm i socket.io-client
