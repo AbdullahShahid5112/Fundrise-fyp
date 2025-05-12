@@ -26,7 +26,7 @@ const Navbar=()=>{
           <span className="hidden sm:inline">Settings</span>
         </Link>
         <Link to="/settings" className="btn btn-sm gap-2 transition-colors">
-          <Settings className="size-4" />
+          
           <span className="hidden sm:inline">HomePage</span>
         </Link>
              <Link to="/idealist" className="btn btn-sm gap-2 transition-colors">
