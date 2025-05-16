@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage" 
 import IdeaListPage from "./pages/IdeaListPage"
+import LandingPage from "./pages/LandingPage";
 
 
 import Navbar from "./components/Navbar";
@@ -39,7 +40,8 @@ const App= ()=>{
       <Route path="/" element={ authUser ? <HomePage /> :<Navigate to={"/login"} />} />
       <Route path="/signup" element={!authUser ? <SignUpPage /> :<Navigate to={"/"} />} />
       <Route path="/login" element={!authUser ? <LoginPage /> :<Navigate to={"/"} />} />
-      <Route path="/settings" element={ <SettingsPage /> } />
+      {/* <Route path="/settings" element={ <SettingsPage /> } /> */}
+      <Route path="/landingpage" element={ <LandingPage /> } />
       <Route path="/idealist" element={<IdeaListPage/>} />
       <Route path="/profile" element={authUser ? <ProfilePage /> :<Navigate to={"/login"}/> } />
       
