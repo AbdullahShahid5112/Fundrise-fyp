@@ -1,9 +1,9 @@
-// import { TypeAnimation } from 'react-type-animation';
+import React from 'react'
 import { Link } from 'react-router-dom';
-
-const SettingsPage = () => {
+import { TypeAnimation } from 'react-type-animation';
+const HeroSection = () => {
   return (
-    <div className="h-screen w-screen">
+      <div className="h-screen w-screen">
       <div className="flex h-full">
         {/* Left Section - 2/3 of the width */}
         <div className="w-2/3 flex justify-center items-center">
@@ -53,7 +53,7 @@ const SettingsPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SettingsPage;
+export default HeroSection
