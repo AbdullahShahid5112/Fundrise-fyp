@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="h-screen w-screen">
       <div className="flex h-full">
         {/* Left Section - 2/3 of the width */}
-        <div className="w-2/3 flex justify-center items-center">
+        <div className="sm:w-2/3 flex justify-center items-center">
           <div className="max-w-[700px] w-full text-center px-6">
             <p className="text-6xl sm:text-5xl font-bold py-4">
               FundRise
@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Section - 1/3 of the width */}
-        <div className="w-1/3 flex justify-center items-center">
+        <div className="w-1/3 md:flex justify-center items-center hidden">
           <div className="w-[90%] text-center">
             <img
               src="23790661-removebg-preview.png"
