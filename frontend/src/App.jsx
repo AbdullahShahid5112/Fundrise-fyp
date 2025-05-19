@@ -7,6 +7,7 @@ import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage" 
 import IdeaListPage from "./pages/IdeaListPage"
 import LandingPage from "./pages/LandingPage";
+import Pitches from "./pages/Pitches";
 
 
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
 import { Loader } from "lucide-react"
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
 
 const App= ()=>{
   const {authUser,checkAuth,isCheckingAuth, onlineUser}=useAuthStore();
@@ -42,10 +44,11 @@ const App= ()=>{
       <Route path="/login" element={!authUser ? <LoginPage /> :<Navigate to={"/"} />} />
       {/* <Route path="/settings" element={ <SettingsPage /> } /> */}
       <Route path="/landingpage" element={ <LandingPage /> } />
-      <Route path="/idealist" element={<IdeaListPage/>} />
+      <Route path="/pitches" element={<Pitches/>} />
       <Route path="/profile" element={authUser ? <ProfilePage /> :<Navigate to={"/login"}/> } />
       
       </Routes>
+      <Footer/>
       <Toaster />
     </div>
   );

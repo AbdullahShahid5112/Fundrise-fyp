@@ -13,10 +13,10 @@ const Navbar=()=>{
      
       {/* Left Side - Logo */}
       <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-all">
-        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-          <MessageSquare className="w-6 h-6 text-primary" />
+        <div className="w-40 h-40 rounded-lg bg-primary/10 flex items-center justify-center py-4">
+          <img src="/public/logo-removebg.png" alt="main-logo"   />
         </div>
-        <h1 className="text-xl font-bold">FundRise</h1>
+ 
       </Link>
 
       {/* Right Side - Navigation */}
@@ -25,11 +25,11 @@ const Navbar=()=>{
           <Settings className="size-4" />
           <span className="hidden sm:inline">Settings</span>
         </Link>
-        <Link to="/settings" className="btn btn-sm gap-2 transition-colors">
+        <Link to="/landingpage" className="btn btn-sm gap-2 transition-colors">
           
           <span className="hidden sm:inline">HomePage</span>
         </Link>
-             <Link to="/idealist" className="btn btn-sm gap-2 transition-colors">
+             <Link to="/pitches" className="btn btn-sm gap-2 transition-colors">
           <span className="hidden sm:inline">Idea List</span>
         </Link>
         
