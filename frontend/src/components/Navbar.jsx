@@ -21,16 +21,20 @@ const Navbar=()=>{
 
       {/* Right Side - Navigation */}
       <div className="flex items-center gap-4">
-        <Link to="/settings" className="btn btn-sm gap-2 transition-colors">
-          <Settings className="size-4" />
-          <span className="hidden sm:inline">Settings</span>
-        </Link>
+        <Link to="/" className="btn btn-sm gap-2 transition-colors">
+  {/* <Settings className="size-4" /> */}
+  <span className="hidden sm:inline">Chat</span>
+</Link>
         <Link to="/landingpage" className="btn btn-sm gap-2 transition-colors">
           
           <span className="hidden sm:inline">HomePage</span>
         </Link>
              <Link to="/pitches" className="btn btn-sm gap-2 transition-colors">
           <span className="hidden sm:inline">Idea List</span>
+        </Link>
+        
+             <Link to="/investors" className="btn btn-sm gap-2 transition-colors">
+          <span className="hidden sm:inline">Investor List</span>
         </Link>
         
         
