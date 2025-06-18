@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const PitchCards = () => {
     const cardData = [
@@ -99,6 +100,24 @@ const PitchCards = () => {
     min: "Rs 3,500,000",
   },
 ];
+ const [pitchData, setPitchData] = useState(null);
+ console.log("🚀 ~ PitchCards ~ pitchData:", pitchData)
+
+  useEffect(() => {
+    const fetchPitch = async () => {
+      try {
+        const res = await axios.get("http://localhost:5001/api/pitch/info", {
+          withCredentials: true
+        });
+        // console.log("🚀 ~ fetchPitch ~ res:", res)
+        setPitchData(res.data.pitches);
+      } catch (error) {
+        console.error("Error fetching pitch:", error.message);
+      }
+    };
+
+    fetchPitch();
+  }, []);
   return (
    <div className="bg-white py-16 px-4 text-center flex justify-center items-center flex-col">
       <h2 className="text-3xl font-bold text-[#00df9a] mb-2">
