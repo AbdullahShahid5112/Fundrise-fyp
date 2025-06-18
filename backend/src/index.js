@@ -1,6 +1,7 @@
 // using express from npm i express 
 import  express  from "express";
 import authRoutes from "./routes/auth.route.js";
+import pitchRoutes from "./routes/pitch.route.js";
 import{connectDb} from "./lib/db.js";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -31,6 +32,7 @@ app.use(cors({
 // For signup 
 app.use("/api/auth",authRoutes);
 app.use("/api/message",messageRoutes);
+app.use("/api/pitch",pitchRoutes)
 
 
 server.listen(5001, ()=>{
