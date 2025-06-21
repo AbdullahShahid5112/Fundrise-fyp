@@ -4,15 +4,17 @@ import { FileUpload } from '../Form/inputfields';
 const Documents = ({ formData, setFormData, onNext }) => {
   const handleChange = (e) => {
     const { name, files } = e.target;
-    setFormData((prev) => ({
-      ...prev,
+    // Update the specific document in the formData
+    setFormData({
+      ...formData,
       [name]: files[0]
-    }));
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNext();
+    console.log("Documents being submitted:", formData);
+    onNext(); 
   };
 
   return (
@@ -51,8 +53,14 @@ const Documents = ({ formData, setFormData, onNext }) => {
         note="Any extra files or supporting documents"
       />
 
-      <button type="submit" className="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-        Save & Continue
+      {/* Debug info */}
+      <div className="mt-4 p-2 bg-gray-100 rounded text-xs">
+        <strong>Debug - Current documents:</strong>
+        <pre>{JSON.stringify(Object.keys(formData).filter(key => formData[key]), null, 2)}</pre>
+      </div>
+
+      <button type="submit" className="mt-6 bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+        Submit Complete Pitch
       </button>
     </form>
   );
