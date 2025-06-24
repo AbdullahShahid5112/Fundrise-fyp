@@ -1,9 +1,11 @@
 import {create} from "zustand";
 // import { axiosInstance } from "../lib/axios.js";
 import axios from "axios";
+import api from "../api/axios";
 import toast from "react-hot-toast";
 import {io} from "socket.io-client"
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export const useAuthStore= create((set,get)=>({
     authUser:null,
     isSigningUp:false,
@@ -17,7 +19,7 @@ export const useAuthStore= create((set,get)=>({
 
     checkAuth: async () => {
     try {
-        const res = await axiosInstance.get("/auth/check");
+        const res = await api.get("/auth/check");
         set({ authUser: res.data });
         get().connectSocket()
     } catch (error) {

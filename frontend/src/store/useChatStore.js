@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 // import axiosInstance from "../lib/axios";
 import { io } from "socket.io-client";
 import api from "../api/axios";
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 // ✅ Move socket outside the function for a single connection
 const socket = io(BASE_URL, { withCredentials: true });
 

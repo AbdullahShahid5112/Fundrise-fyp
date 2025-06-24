@@ -198,7 +198,7 @@ const AddIdeaPage = () => {
 
       // Send FormData with proper headers
       const res = await api.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/pitch/info`,
+         "/pitch/info",
         submitData,
         { 
           withCredentials: true,
