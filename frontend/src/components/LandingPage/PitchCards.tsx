@@ -107,7 +107,7 @@ const PitchCards = () => {
   useEffect(() => {
   const fetchPitch = async () => {
     try {
-      const res = await api.get("/api/pitch/info"); // ✅ use your axios instance
+      const res = await api.get("/pitch/info"); // ✅ use your axios instance
       setPitchData(res.data.pitches);
     } catch (error) {
       console.error("Error fetching pitch:", error.message);
