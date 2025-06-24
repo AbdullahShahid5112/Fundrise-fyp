@@ -1,10 +1,11 @@
 import { create } from "zustand";
 import toast from "react-hot-toast";
-import axiosInstance from "../lib/axios";
+// import axiosInstance from "../lib/axios";
 import { io } from "socket.io-client";
-
+import api from "../api/axios";
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 // ✅ Move socket outside the function for a single connection
-const socket = io("http://localhost:5001", { withCredentials: true });
+const socket = io(BASE_URL, { withCredentials: true });
 
 export const useChatStore = create((set, get) => ({
     messages: [],
@@ -19,7 +20,7 @@ export const useChatStore = create((set, get) => ({
     getUsers: async () => {
         set({ isUsersLoading: true });
         try {
-            const res = await axiosInstance.get("/message/user");
+            const res = await api.get("/message/user");
             console.log("API Response (Users):", res.data);
             set({ users: res.data, isUsersLoading: false });
         } catch (error) {
@@ -43,7 +44,7 @@ export const useChatStore = create((set, get) => ({
     getMessages: async (userId) => {
         set({ isMessagesLoading: true });
         try {
-            const res = await axiosInstance.get(`/message/${userId}`);
+            const res = await api.get(`/message/${userId}`);
             console.log("Fetched Messages:", res.data);
             set({ messages: Array.isArray(res.data) ? res.data : [] });
         } catch (error) {
@@ -63,7 +64,7 @@ export const useChatStore = create((set, get) => ({
         }
 
         try {
-            const res = await axiosInstance.post(`/message/send/${selectedUser._id}`, messageData);
+            const res = await api.post(`/message/send/${selectedUser._id}`, messageData);
             console.log("Message Sent:", res.data);
             
             set({

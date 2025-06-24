@@ -4,7 +4,8 @@ import CompanyInfoForm from "../components/FormSteps/Companyinfo.jsx";
 import PitchDeal from "../components/FormSteps/PitchDeal.jsx";
 import ImagesVideos from "../components/FormSteps/ImagesVideos.jsx";
 import Documents from "../components/FormSteps/Documents.jsx";
-import axios from "axios";
+// import axios from "axios";
+import api from "../api/axios";
 
 const AddIdeaPage = () => {
   const [step, setStep] = useState(1);
@@ -196,8 +197,8 @@ const AddIdeaPage = () => {
       }
 
       // Send FormData with proper headers
-      const res = await axios.post(
-        'http://localhost:5001/api/pitch/info',
+      const res = await api.post(
+        `${process.env.REACT_APP_API_BASE_URL}/api/pitch/info`,
         submitData,
         { 
           withCredentials: true,
