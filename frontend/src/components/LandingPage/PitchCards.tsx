@@ -6,7 +6,7 @@ const PitchCards = () => {
   {
     tag: "Pro",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    logo: "/public/pitchcards/logo1.jpg",
+    logo: "/pitchcards/logo1.jpg",
     title: "Next-Gen Energy Now",
     location: "Balochistan, Pakistan",
     description:
@@ -22,7 +22,7 @@ const PitchCards = () => {
   {
     tag: "Executive",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    logo: "/public/pitchcards/logo2.png",
+    logo: "/pitchcards/logo2.png",
     title: "Tangle",
     location: "West, United States",
     description:
@@ -38,7 +38,7 @@ const PitchCards = () => {
   {
     tag: "Executive",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    logo: "/public/pitchcards/logo3.jpg",
+    logo: "/pitchcards/logo3.jpg",
     title: "E.L.V. Denim",
     location: "London, United Kingdom",
     description:
@@ -54,7 +54,7 @@ const PitchCards = () => {
   {
     tag: "Pro",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    logo: "/public/pitchcards/logo1.jpg",
+    logo: "/pitchcards/logo1.jpg",
     title: "Next-Gen Energy Now",
     location: "Balochistan, Pakistan",
     description:
@@ -70,7 +70,7 @@ const PitchCards = () => {
   {
     tag: "Executive",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    logo: "/public/pitchcards/logo2.png",
+    logo: "/pitchcards/logo2.png",
     title: "Tangle",
     location: "West, United States",
     description:
@@ -86,7 +86,7 @@ const PitchCards = () => {
   {
     tag: "Executive",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    logo: "/public/pitchcards/logo3.jpg",
+    logo: "/pitchcards/logo3.jpg",
     title: "E.L.V. Denim",
     location: "London, United Kingdom",
     description:

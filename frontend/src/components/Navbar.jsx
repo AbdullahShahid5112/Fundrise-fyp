@@ -14,7 +14,7 @@ const Navbar=()=>{
       {/* Left Side - Logo */}
       <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-all">
         <div className="w-40 h-40 rounded-lg bg-primary/10 flex items-center justify-center py-4">
-          <img src="/public/logo-removebg.png" alt="main-logo"   />
+          <img src="/logo-removebg.png" alt="main-logo"   />
         </div>
  
       </Link>
