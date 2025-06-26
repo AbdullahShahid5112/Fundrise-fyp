@@ -23,7 +23,7 @@ import Chat from "./pages/Chat";
 const App= ()=>{
   const {authUser,checkAuth,isCheckingAuth, onlineUser}=useAuthStore();
 
-  console.log({ onlineUser});
+  // console.log({ onlineUser});
   useEffect(()=>{
     checkAuth()
   },[checkAuth]);
@@ -39,9 +39,8 @@ const App= ()=>{
     
     <div>
     
-      <Navbar />
       <Routes>
-     
+       
       <Route path="/" element={ authUser ? <LandingPage /> :<Navigate to={"/login"} />} />
       <Route path="/signup" element={!authUser ? <SignUpPage /> :<Navigate to={"/"} />} />
       <Route path="/login" element={!authUser ? <LoginPage /> :<Navigate to={"/"} />} />
@@ -54,7 +53,6 @@ const App= ()=>{
       <Route path="/profile" element={authUser ? <ProfilePage /> :<Navigate to={"/login"}/> } />
       
       </Routes>
-      <Footer/>
       <Toaster />
     </div>
   );
