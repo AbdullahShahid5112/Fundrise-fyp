@@ -43,10 +43,7 @@ const Industries = () => {
         ))}
       </div>
 
-      <div >
-        <h1>hello</h1>
-        <p>hi i am good</p>
-      </div>
+     
 
           </div>
     </section>

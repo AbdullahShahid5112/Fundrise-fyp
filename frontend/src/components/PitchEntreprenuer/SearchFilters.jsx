@@ -2,12 +2,9 @@ import React from 'react';
 
 const filterButtons = [
   'Investment Range',
-  'Country',
-  'Location',
-  'Industry',
+  'Investor Type',
   'Stages',
-  'Languages',
-  'Funding Type'
+  'Location',
 ];
 
 const SearchFilters = ({ filters, setFilters, handleApply, clearFilters }) => {

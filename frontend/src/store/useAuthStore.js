@@ -1,9 +1,11 @@
 import {create} from "zustand";
-import { axiosInstance } from "../lib/axios.js";
+// import { axiosInstance } from "../lib/axios.js";
 import axios from "axios";
+import api from "../api/axios";
 import toast from "react-hot-toast";
 import {io} from "socket.io-client"
-const BASE_URL="http://localhost:5001"
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export const useAuthStore= create((set,get)=>({
     authUser:null,
     isSigningUp:false,
@@ -17,7 +19,7 @@ export const useAuthStore= create((set,get)=>({
 
     checkAuth: async () => {
     try {
-        const res = await axiosInstance.get("/auth/check");
+        const res = await api.get("/auth/check");
         set({ authUser: res.data });
         get().connectSocket()
     } catch (error) {
@@ -31,7 +33,7 @@ signup: async (data) => {
     set({ isSigningUp: true });
 
     try {
-        const res = await axiosInstance.post("/auth/signup", data);
+        const res = await api.post("/auth/signup", data);
         console.log("Signup Response:", res); // Debugging
 
         if (res && res.data) {
@@ -52,7 +54,7 @@ login: async (data) => {
     set({ isLoggingIn: true });
 
     try {
-        const res = await axiosInstance.post("/auth/login", data);
+        const res = await api.post("/auth/login", data);
 
         // Ensure token is correctly extracted and stored
         const token = res.data?.token;
@@ -77,7 +79,7 @@ login: async (data) => {
 
 logout: async()=>{
     try {
-        await axiosInstance.post("/auth/logout");
+        await api.post("/auth/logout");
         set({authUser:null})
         toast.success("logged out successfully");
         get().disconnectSocket();
@@ -90,7 +92,7 @@ updateProfile: async (data) => {
 
     try {
         console.log("Updating profile with data:", data);
-        const res = await axiosInstance.put("/auth/updating-profile", data);
+        const res = await api.put("/auth/updating-profile", data);
 
         console.log("Updated Profile Response:", res.data);
 

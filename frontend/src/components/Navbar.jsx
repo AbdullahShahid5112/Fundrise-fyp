@@ -7,25 +7,25 @@ const Navbar=()=>{
   
    const {logout,authUser}= useAuthStore();
    return (
-  <header className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 backdrop-blur-lg bg-base-100/80">
+  <header className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 backdrop-blur-lg bg-base-100/80 bg-[#0d121c]/60">
     <div className="container mx-auto px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between">
       
      
       {/* Left Side - Logo */}
       <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-all">
         <div className="w-40 h-40 rounded-lg bg-primary/10 flex items-center justify-center py-4">
-          <img src="/public/logo-removebg.png" alt="main-logo"   />
+          <img src="/logo-removebg.png" alt="main-logo"   />
         </div>
  
       </Link>
 
       {/* Right Side - Navigation */}
-      <div className="flex items-center gap-4">
-        <Link to="/" className="btn btn-sm gap-2 transition-colors">
+      <div className="flex items-center gap-4 text-white">
+        <Link to="/chat" className="btn btn-sm gap-2 transition-colors">
   {/* <Settings className="size-4" /> */}
   <span className="hidden sm:inline">Chat</span>
 </Link>
-        <Link to="/landingpage" className="btn btn-sm gap-2 transition-colors">
+        <Link to="/" className="btn btn-sm gap-2 transition-colors">
           
           <span className="hidden sm:inline">HomePage</span>
         </Link>
