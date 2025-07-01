@@ -215,9 +215,7 @@ const AddIdeaPage = () => {
       console.log("Complete pitch submitted:", res.data);
       alert("Pitch submitted successfully!");
       
-      // Optionally reset form or redirect
-      // setFormData(initialFormData);
-      // navigate('/pitches');
+
       
     } catch (error) {
       console.error("🚀 ~ finalSubmit ~ error:", error);
