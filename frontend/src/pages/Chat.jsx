@@ -2,13 +2,16 @@ import { useChatStore } from "../store/useChatStore";
 import Sidebar from "../components/Sidebar";
 import ChatContainer from "../components/ChatContainer"
 import NoChatSelected from "../components/NoChatSelected"
-const HomePage = () => {
+import DefaultLayout from "../components/layout/defaultLayout";
+const Chat = () => {
   const { selectedUser } = useChatStore();
   console.log("Selected User:", selectedUser); 
 
   return (
     <div>
-      <h1>HomePage Loaded</h1> 
+            <h1 className="mt-32">Chat app Loaded</h1> 
+
+      <DefaultLayout >
       
       <div className="h-screen bg-base-200">
         <div className="flex items-center justify-center pt-20 px-4">
@@ -20,7 +23,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      </DefaultLayout>
     </div>
   );
 };
-export default HomePage;
+export default Chat;

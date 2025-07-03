@@ -4,7 +4,8 @@ import CompanyInfoForm from "../components/FormSteps/Companyinfo.jsx";
 import PitchDeal from "../components/FormSteps/PitchDeal.jsx";
 import ImagesVideos from "../components/FormSteps/ImagesVideos.jsx";
 import Documents from "../components/FormSteps/Documents.jsx";
-import axios from "axios";
+// import axios from "axios";
+import api from "../api/axios";
 
 const AddIdeaPage = () => {
   const [step, setStep] = useState(1);
@@ -196,8 +197,8 @@ const AddIdeaPage = () => {
       }
 
       // Send FormData with proper headers
-      const res = await axios.post(
-        'http://localhost:5001/api/pitch/info',
+      const res = await api.post(
+         "/pitch/info",
         submitData,
         { 
           withCredentials: true,
@@ -214,9 +215,7 @@ const AddIdeaPage = () => {
       console.log("Complete pitch submitted:", res.data);
       alert("Pitch submitted successfully!");
       
-      // Optionally reset form or redirect
-      // setFormData(initialFormData);
-      // navigate('/pitches');
+
       
     } catch (error) {
       console.error("🚀 ~ finalSubmit ~ error:", error);

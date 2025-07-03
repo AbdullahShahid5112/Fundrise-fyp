@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 const HeroSection = () => {
   return (
-      <div className="h-screen w-screen">
+      <div className="h-screen w-screen bg-[#0d121c]/60">
       <div className="flex h-full">
         {/* Left Section - 2/3 of the width */}
         <div className="sm:w-2/3 flex justify-center items-center">
           <div className="max-w-[700px] w-full text-center px-6">
-            <p className="text-6xl sm:text-5xl font-bold py-4">
+            <p className="text-white text-6xl sm:text-5xl font-bold py-4">
               FundRise
             </p>
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
             </p>
 
             <Link to="/login">
-              <button className="mt-8 bg-[#00df9a] w-2/3 rounded-full font-semibold py-3 text-black shadow-lg hover:shadow-xl hover:bg-[#00c488] transition-all duration-300 transform hover:scale-105 text-lg">
+              <button className="mt-8 bg-[#00df9a] w-2/3 rounded-full font-semibold py-3 text-white shadow-lg hover:shadow-xl hover:bg-[#00c488] transition-all duration-300 transform hover:scale-105 text-lg">
                 <p>Get Started With Your Account</p>
               </button>
             </Link>

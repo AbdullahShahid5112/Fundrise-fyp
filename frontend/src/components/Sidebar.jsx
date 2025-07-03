@@ -16,7 +16,7 @@ const Sidebar = () => {
   }, []);
 
   const filteredUsers = showOnlineOnly
-    ? users.filter(user => onlineUser.includes(user._id))
+    ? users.filter(user => onlineUser?.includes(user._id))
     : users;
     
 
@@ -39,7 +39,7 @@ const Sidebar = () => {
             />
             <span>Show Online Users Only</span>
           </label>
-          <span className="text-xs text-zinc-500">({onlineUser.length - 1} online)</span>
+          <span className="text-xs text-zinc-500">({onlineUser?.length - 1} online)</span>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ const Sidebar = () => {
                 alt={user.name}
                 className="size-12 object-cover rounded-full"
               />
-              {onlineUser.includes(user._id) && (
+              {onlineUser?.includes(user._id) && (
                 <span className="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full ring-2 ring-zinc-900" />
               )}
             </div>
@@ -72,7 +72,7 @@ const Sidebar = () => {
           </button>
         ))}
 
-        {filteredUsers.length === 0 && (
+        {filteredUsers?.length === 0 && (
           <div className="text-center text-zinc-500 py-4">No online users</div>
         )}
       </div>
